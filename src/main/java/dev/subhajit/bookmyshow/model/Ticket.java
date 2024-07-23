@@ -1,10 +1,7 @@
 package dev.subhajit.bookmyshow.model;
 
 import dev.subhajit.bookmyshow.model.Constant.TicketStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,8 +17,8 @@ public class Ticket extends BaseModel{
 
     @OneToMany
     private List<ShowSeat> showSeats;
-    @OneToMany
-    private Show shows;
+    @ManyToOne
+    private Show show;
     @Enumerated(EnumType.STRING)
     private TicketStatus ticketStatus;
 

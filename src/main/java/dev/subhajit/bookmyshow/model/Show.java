@@ -2,6 +2,7 @@ package dev.subhajit.bookmyshow.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ManyToAny;
@@ -20,7 +21,7 @@ public class Show extends BaseModel{
     private Movie movies;
     @ManyToOne
     private Auditorium auditorium;
-    @ManyToOne
+    @OneToMany
     private List<ShowSeat> showSeats;
 
 }

@@ -18,5 +18,5 @@ public class Auditorium extends BaseModel{
     private List<Seat> seats;
     @ElementCollection
     @Enumerated(EnumType.STRING)
-    private List<AuditoriumFeature> auditoriumfeatures;
+    private List<AuditoriumFeature> auditoriumFeatures;
 }
